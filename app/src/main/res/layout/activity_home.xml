@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient_background"
+    >
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homePageTitle"
+        android:textSize="24sp"
+        android:layout_margin="14dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/oswaldbold"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_menu_item"
+
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="32dp"
+        app:itemTextColor="@color/black"
+        app:itemTextAppearanceInactive="@style/TextAppearance.AppCompat.Small"
+        app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
+        app:labelVisibilityMode="labeled"
+        android:paddingBottom="0dp"
+         />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
