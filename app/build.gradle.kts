@@ -44,16 +44,31 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.play.services.analytics.impl)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.material)
+
+    // Glide dependencies
+    implementation(libs.glide) // Glide core library
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1") // Glide annotation processor
 
     // Room dependencies
     implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
     kapt("androidx.room:room-compiler:2.6.0")
 
-
+    // Optional: Additional Room libraries
     implementation("androidx.room:room-paging:2.6.0")
     implementation("androidx.room:room-rxjava3:2.6.0")
+
+    // ViewModel and LiveData dependencies
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0") // ViewModel
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.0")   // LiveData
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")    // Lifecycle components
+
+    // For Kotlin annotation processing
+    kapt("androidx.lifecycle:lifecycle-compiler:2.6.0")  // Required for annotation processing with ViewModel
 }
+

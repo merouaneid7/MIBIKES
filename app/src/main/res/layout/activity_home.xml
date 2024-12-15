@@ -42,5 +42,6 @@
         app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
         app:labelVisibilityMode="labeled"
         android:paddingBottom="0dp"
+        app:itemBackground="@drawable/transparent_selector"
          />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
